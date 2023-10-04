@@ -19,7 +19,6 @@ html {
   background-color: var(--primaryBlack);
   color: var(--textMain);
   background-image: url("../assets/home.png");
-  height: 6871px;
 }
 
 body {
@@ -69,5 +68,33 @@ body {
   }
   to {
     width: 50%;
+  }
+}
+
+.welcome {
+  position: absolute;
+  background-image: url("../assets/svg/welcome/home_bg.png");
+  background-position: right;
+  bottom: 0;
+  width: 900px;
+  height: 100%;
+  right: -85px;
+  mix-blend-mode: screen;
+  z-index: -2;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+@media (max-width: 1124px) {
+  .welcome {
+    width: 750px;
+    right: -35px;
+  }
+}
+
+@media (max-width: 970px) {
+  .welcome {
+    width: 600px;
+    right: -45px;
   }
 }

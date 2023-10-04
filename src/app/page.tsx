@@ -1,10 +1,11 @@
+import Clients from "@/components/home/Clients";
 import Welcome from "@/components/home/Welcome";
-import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="flex flex-1 blur__effect flex-col ">
+    <main className="flex gap-5 blur__effect flex-col h-full">
       <Welcome />
+      <Clients />
     </main>
   );
 }

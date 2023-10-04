@@ -24,7 +24,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={cn(
-          "flex flex-col overflow-y-auto overflow-x-hidden h-screen",
+          "flex flex-col -z-10  overflow-x-hidden  min-h-screen relative",
           inter.className
         )}
       >
