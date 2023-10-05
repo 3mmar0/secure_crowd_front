@@ -19,6 +19,7 @@ html {
   background-color: var(--primaryBlack);
   color: var(--textMain);
   background-image: url("../assets/home.png");
+  background-size: cover;
 }
 
 body {
@@ -71,30 +72,102 @@ body {
   }
 }
 
-.welcome {
+.welcome::before {
+  content: "";
   position: absolute;
-  background-image: url("../assets/svg/welcome/home_bg.png");
-  background-position: right;
+  top: 0;
+  left: 0;
+  right: 0;
   bottom: 0;
-  width: 900px;
-  height: 100%;
-  right: -85px;
+  background-image: url("../assets/svg/welcome/home_bg.png");
+  background-position: top right;
   mix-blend-mode: screen;
   z-index: -2;
   background-repeat: no-repeat;
   background-size: contain;
 }
 
-@media (max-width: 1124px) {
-  .welcome {
-    width: 750px;
-    right: -35px;
+@media (max-width: 600px) {
+  .welcome::before {
+    opacity: 0.7;
+    background-size: cover;
   }
 }
 
-@media (max-width: 970px) {
-  .welcome {
-    width: 600px;
-    right: -45px;
+.arrows::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 400px;
+  height: 120%;
+  background-image: url("../assets/arrows.png");
+  background-position: top right;
+  z-index: -2;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (min-width: 1360px) {
+  .testing span:nth-child(6) {
+    display: none;
+  }
+}
+
+@media (max-width: 1359px) {
+  .testing span:nth-child(4) {
+    display: none;
+  }
+  .testing span:nth-child(8) {
+    display: none;
+  }
+}
+
+@media (max-width: 1359px) and (min-width: 1324px) {
+  .testing div:nth-child(3) {
+    margin-right: 40px;
+  }
+  .testing div:nth-child(7) {
+    margin-right: 40px;
+  }
+  .testing div:nth-child(11) {
+    margin-right: 40px;
+  }
+}
+
+@media (max-width: 844px) {
+  .testing span:nth-child(4) {
+    display: none;
+  }
+  .testing span:nth-child(8) {
+    display: none;
+  }
+  .testing span:nth-child(2) {
+    display: none;
+  }
+  .testing span:nth-child(6) {
+    display: none;
+  }
+  .testing span:nth-child(10) {
+    display: none;
+  }
+
+  .testing div:nth-child(1) {
+    margin: 0 40px;
+  }
+  .testing div:nth-child(3) {
+    margin: 0 40px;
+  }
+  .testing div:nth-child(5) {
+    margin: 0 40px;
+  }
+  .testing div:nth-child(7) {
+    margin: 0 40px;
+  }
+  .testing div:nth-child(9) {
+    margin: 0 40px;
+  }
+  .testing div:nth-child(11) {
+    margin: 0 40px;
   }
 }

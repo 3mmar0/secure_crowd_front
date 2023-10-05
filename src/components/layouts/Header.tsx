@@ -34,7 +34,7 @@ const Header: FC<HeaderProps> = () => {
         <span className={cn(russo.className, "block")}>SecuredCrowed</span>
       </div>
       <div className="flex flex-1 items-center justify-end gap-6 h-full w-full divide-x">
-        <nav className="h-full items-center hidden md:flex flex-1 gap-3 justify-around list-none">
+        <ul className="h-full items-center hidden md:flex flex-1 gap-3 justify-around list-none">
           {data.map((e, i) => (
             <li
               className={cn(
@@ -46,10 +46,10 @@ const Header: FC<HeaderProps> = () => {
               <Link href={"/"}>{e.ttl}</Link>
             </li>
           ))}
-        </nav>
+        </ul>
         <div className="flex items-center h-full border-border lg:pl-16 pl-6">
           <button className="bg-btn hover:bg-btn/80 active:scale-90 h-[40px] lg:w-[150px] w-[120px] flex items-center justify-center rounded-full">
-            Get Start
+            Get Started
           </button>
         </div>
       </div>

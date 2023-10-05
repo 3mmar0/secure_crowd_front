@@ -23,6 +23,10 @@ const config: Config = {
         bg: "#3358E8",
         border: "#232429",
       },
+      gridTemplateColumns: {
+        "card-md": "repeat(auto-fit, minmax(230px, 1fr))",
+        "card-sm": "repeat(auto-fit, minmax(200px, 1fr))",
+      },
     },
   },
   plugins: [],
