@@ -38,6 +38,7 @@ const Comments: FC<CommentsProps> = () => {
             </div>
             <div className="flex justify-end gap-4">
               <ChevronLeftCircle />
+
               <ChevronRightCircle />
             </div>
           </div>
