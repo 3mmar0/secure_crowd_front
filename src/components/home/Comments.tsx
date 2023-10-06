@@ -1,44 +1,98 @@
-import { FC } from "react";
+"use client";
+import { FC, useState } from "react";
 import CardContainer from "../CardContainer";
 import Image from "next/image";
 import avatar from "@/assets/Avatar.png";
 import activeCircle from "@/assets/svg/icons/activeCircle.svg";
 import circle from "@/assets/svg/icons/circle.svg";
 import { ChevronLeftCircle, ChevronRightCircle } from "lucide-react";
+import CommentCard from "../cards/CommentCard";
 
 interface CommentsProps {}
 
+const comments = [
+  {
+    id: 1,
+    person: avatar,
+    ttl: "Cédric de Saint Léger 1",
+    subTtl: "CTO at impak Analytics",
+    disc: "The team at SecureCrowd has helped us at impak identify some vulnerabilities on our website. Their work is very thorough and they have been going above and beyond expectations. Thank you  SecureCrowd !",
+  },
+  {
+    id: 2,
+    person: avatar,
+    ttl: "Cédric de Saint Léger 2",
+    subTtl: "CTO at impak Analytics",
+    disc: "The team at SecureCrowd has helped us at impak identify some vulnerabilities on our website. Their work is very thorough and they have been going above and beyond expectations. Thank you  SecureCrowd !",
+  },
+  {
+    id: 3,
+    person: avatar,
+    ttl: "Cédric de Saint Léger 3",
+    subTtl: "CTO at impak Analytics",
+    disc: "The team at SecureCrowd has helped us at impak identify some vulnerabilities on our website. Their work is very thorough and they have been going above and beyond expectations. Thank you  SecureCrowd !",
+  },
+  {
+    id: 4,
+    person: avatar,
+    ttl: "Cédric de Saint Léger 4",
+    subTtl: "CTO at impak Analytics",
+    disc: "The team at SecureCrowd has helped us at impak identify some vulnerabilities on our website. Their work is very thorough and they have been going above and beyond expectations. Thank you  SecureCrowd !",
+  },
+];
+
 const Comments: FC<CommentsProps> = () => {
+  const [current, setcurrent] = useState(0);
   return (
     <CardContainer ttl="What Our Clients Say About Us" className="arrows">
       <div className="p-4 bg-secondaryBlack rounded-lg">
         <div className="comments relative p-4 z-0 rounded-md">
-          <div className="flex gap-4 items-center">
-            <Image src={avatar} alt="" />
-            <div>
-              <h2 className="text-white sm:text-3xl text-xl mb-2">
-                Cédric de Saint Léger
-              </h2>
-              <p className="sm:text-base text-sm">CTO at impak Analytics</p>
-            </div>
+          <div className="flex overflow-auto w-full">
+            {comments?.map((e, i) => {
+              return current + 1 === e.id ? (
+                <CommentCard
+                  className="w-max"
+                  key={e.id}
+                  avatar={e.person}
+                  disc={e.disc}
+                  ttl={e.ttl}
+                  subTtl={e.subTtl}
+                />
+              ) : (
+                ""
+              );
+            })}
           </div>
-          <p className="qoute relative font-semibold sm:mx-16 mx-6 text-center my-10">
-            The team at SecureCrowd has helped us at impak identify some
-            vulnerabilities on our website. Their work is very thorough and they
-            have been going above and beyond expectations. Thank
-            you SecureCrowd !
-          </p>
           <div className="py-2 mx-4 grid grid-cols-3 items-center justify-center gap-3">
             <div></div>
             <div className="flex justify-center gap-2">
-              <Image src={activeCircle} alt="" />
-              <Image src={circle} alt="" />
-              <Image src={circle} alt="" />
-              <Image src={circle} alt="" />
+              <Image
+                className="active:scale-90"
+                onClick={() => setcurrent(0)}
+                src={current === 0 ? activeCircle : circle}
+                alt=""
+              />
+              <Image
+                className="active:scale-90"
+                onClick={() => setcurrent(1)}
+                src={current === 1 ? activeCircle : circle}
+                alt=""
+              />
+              <Image
+                className="active:scale-90"
+                onClick={() => setcurrent(2)}
+                src={current === 2 ? activeCircle : circle}
+                alt=""
+              />
+              <Image
+                className="active:scale-90"
+                onClick={() => setcurrent(3)}
+                src={current === 3 ? activeCircle : circle}
+                alt=""
+              />
             </div>
             <div className="flex justify-end gap-4">
               <ChevronLeftCircle />
-
               <ChevronRightCircle />
             </div>
           </div>

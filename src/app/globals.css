@@ -222,3 +222,20 @@ body {
   background-image: url("../assets//svg/icons/quote.svg");
   background-repeat: no-repeat;
 }
+
+.fade {
+  opacity: 1;
+  animation: fade 0.7s ease-in-out;
+  overflow: hidden;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    filter: blur(4px);
+  }
+  to {
+    filter: blur(0);
+    opacity: 1;
+  }
+}
