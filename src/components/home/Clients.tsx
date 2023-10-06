@@ -7,7 +7,7 @@ import Walmart from "@/assets/Walmart_logo_PNG1.png";
 import ggl from "@/assets/google.png";
 import Fedex from "@/assets/FedEx_logo_PNG6.png";
 import microsoft from "@/assets/microsoft.png";
-import ClientCard from "./ClientCard";
+import ClientCard from "../cards/ClientCard";
 import CardContainer from "../CardContainer";
 
 interface ClientsProps {}

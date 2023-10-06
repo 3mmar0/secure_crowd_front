@@ -29,7 +29,7 @@ const Welcome: FC<WelcomeProps> = () => {
               type="text"
               placeholder="Enter your email"
             />
-            <button className="text-white sm:whitespace-nowrap w-full py-2 px-6 bg-gradient-to-b from-[#325FE3] to-[#367FD3] rounded-md">
+            <button className="hover:opacity-80 active:scale-90 text-white sm:whitespace-nowrap w-full py-2 px-6 bg-gradient-to-b from-[#325FE3] to-[#367FD3] rounded-md">
               Request a Demo
             </button>
           </div>

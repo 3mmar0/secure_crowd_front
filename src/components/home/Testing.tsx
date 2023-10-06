@@ -2,7 +2,7 @@ import { FC } from "react";
 import CardContainer from "../CardContainer";
 import Image from "next/image";
 import testing from "@/assets/testing.png";
-import TestingCard from "./TestingCard";
+import TestingCard from "../cards/TestingCard";
 
 interface TestingProps {}
 
