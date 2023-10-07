@@ -227,7 +227,6 @@ body {
   opacity: 1;
   animation: fade 0.7s ease-in-out;
   overflow: hidden;
-  border-style: dashed;
 }
 
 @keyframes fade {
