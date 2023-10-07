@@ -14,7 +14,7 @@
   --btn: #2f50cf;
   --bg: #3358e8;
 }
-
+/* global */
 html {
   background-color: var(--primaryBlack);
   color: var(--textMain);
@@ -39,6 +39,7 @@ body {
   line-clamp: 2;
   -webkit-box-orient: vertical;
 }
+
 .text-3 {
   overflow: hidden;
   text-overflow: ellipsis;

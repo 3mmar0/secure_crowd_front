@@ -21,7 +21,6 @@ const BlogCard: FC<BlogCardProps> = () => {
         nibh euismod tincidunt ut laoreet dolore magna nibh euismod tincidunt ut
         laoreet dolore magna
       </p>
-
       <div className="flex items-center gap-3 mt-5">
         <HorizontalLogo />
         <span className="w-px h-5 bg-text"></span>
