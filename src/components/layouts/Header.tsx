@@ -6,6 +6,7 @@ import { Russo_One } from "next/font/google";
 import { cn } from "@/utils/utils";
 import Link from "next/link";
 import { IsMatch } from "@/utils/hooks";
+import Button from "../ui/Button";
 
 const russo = Russo_One({ weight: ["400"], subsets: ["latin"] });
 
@@ -48,9 +49,7 @@ const Header: FC<HeaderProps> = () => {
           ))}
         </ul>
         <div className="flex items-center h-full border-border lg:pl-16 pl-6">
-          <button className="bg-btn hover:bg-btn/80 active:scale-90 h-[40px] lg:w-[150px] w-[120px] flex items-center justify-center rounded-full">
-            Get Started
-          </button>
+          <Button txt="Get Started" />
         </div>
       </div>
     </div>

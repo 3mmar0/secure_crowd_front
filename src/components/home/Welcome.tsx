@@ -11,7 +11,7 @@ const Welcome: FC<WelcomeProps> = () => {
   return (
     <div className="welcome relative w-full h-max py-3 pb-5 ">
       <div className=" lg:mx-[7%] mx-[4%] lg:text-base text-sm font-medium grid md:grid-cols-7 grid-cols-1 items-center md:flex-row flex-col h-max ">
-        <div className="w-full sm:my-5 mb-10 md:col-span-4 md:place-self-center place-self-start mt-6 text-white">
+        <div className="w-full mt-20 md:col-span-4 sm:place-self-center place-self-start text-white">
           <h2
             className={cn(russo.className, "lg:text-5xl sm:text-4xl text-2xl")}
           >

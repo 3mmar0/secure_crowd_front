@@ -42,14 +42,34 @@ const comments = [
 ];
 
 const Comments: FC<CommentsProps> = () => {
-  const [current, setcurrent] = useState(0);
+  const [current, setcurrent] = useState(1);
+
+  const handleNext = () => {
+    if (current < comments.length) {
+      setcurrent(current + 1);
+    }
+    if (current === comments.length) {
+      setcurrent(1);
+    }
+  };
+  const handleBack = () => {
+    if (current > 1) {
+      setcurrent(current - 1);
+    }
+    if (current === 1) {
+      setcurrent(4);
+    }
+  };
   return (
-    <CardContainer ttl="What Our Clients Say About Us" className="arrows">
+    <CardContainer
+      ttl="What Our Clients Say About Us"
+      className="arrows relative"
+    >
       <div className="p-4 bg-secondaryBlack rounded-lg">
         <div className="comments relative p-4 z-0 rounded-md">
           <div className="flex overflow-auto w-full">
             {comments?.map((e, i) => {
-              return current + 1 === e.id ? (
+              return current === e.id ? (
                 <CommentCard
                   className="w-max"
                   key={e.id}
@@ -67,33 +87,39 @@ const Comments: FC<CommentsProps> = () => {
             <div></div>
             <div className="flex justify-center gap-2">
               <Image
-                className="active:scale-90"
-                onClick={() => setcurrent(0)}
-                src={current === 0 ? activeCircle : circle}
-                alt=""
-              />
-              <Image
-                className="active:scale-90"
+                className="active:scale-90 cursor-pointer"
                 onClick={() => setcurrent(1)}
                 src={current === 1 ? activeCircle : circle}
                 alt=""
               />
               <Image
-                className="active:scale-90"
+                className="active:scale-90 cursor-pointer"
                 onClick={() => setcurrent(2)}
                 src={current === 2 ? activeCircle : circle}
                 alt=""
               />
               <Image
-                className="active:scale-90"
+                className="active:scale-90 cursor-pointer"
                 onClick={() => setcurrent(3)}
                 src={current === 3 ? activeCircle : circle}
                 alt=""
               />
+              <Image
+                className="active:scale-90 cursor-pointer"
+                onClick={() => setcurrent(4)}
+                src={current === 4 ? activeCircle : circle}
+                alt=""
+              />
             </div>
             <div className="flex justify-end gap-4">
-              <ChevronLeftCircle />
-              <ChevronRightCircle />
+              <ChevronLeftCircle
+                className="active:scale-110 cursor-pointer"
+                onClick={handleBack}
+              />
+              <ChevronRightCircle
+                className="active:scale-110 cursor-pointer"
+                onClick={handleNext}
+              />
             </div>
           </div>
         </div>

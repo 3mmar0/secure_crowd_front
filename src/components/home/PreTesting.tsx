@@ -9,7 +9,7 @@ interface PreTestingProps {}
 const PreTesting: FC<PreTestingProps> = () => {
   return (
     <CardContainer
-      className="mb-10 w-full relative arrows"
+      className="mb-10 w-full relative arrows before:bg-contain"
       ttl="Penerration Testing Overview"
     >
       <div className="w-full">
