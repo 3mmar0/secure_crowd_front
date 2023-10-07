@@ -26,6 +26,7 @@ const config: Config = {
       gridTemplateColumns: {
         "card-md": "repeat(auto-fit, minmax(230px, 1fr))",
         "card-sm": "repeat(auto-fit, minmax(200px, 1fr))",
+        blog: "repeat(auto-fit, minmax(330px, 1fr))",
       },
     },
   },

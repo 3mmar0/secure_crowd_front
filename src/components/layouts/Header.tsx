@@ -7,6 +7,7 @@ import { cn } from "@/utils/utils";
 import Link from "next/link";
 import { IsMatch } from "@/utils/hooks";
 import Button from "../ui/Button";
+import HorizontalLogo from "./HorizontalLogo";
 
 const russo = Russo_One({ weight: ["400"], subsets: ["latin"] });
 
@@ -23,17 +24,7 @@ const data = [
 const Header: FC<HeaderProps> = () => {
   return (
     <div className="lg:h-[116px] md:h-[95px] h-[70px] my-4 lg:mx-[7%] lg:text-base text-sm font-medium mx-[4%]  flex items-center justify-between gap-6 border-y border-border transition-all duration-700">
-      <div className="flex min-w-max items-center gap-1">
-        <Image
-          src={Logo}
-          className="md:w-[75px] md:h-[75px] w-14 h-14"
-          width={75}
-          height={75}
-          alt=""
-          draggable={false}
-        />
-        <span className={cn(russo.className, "block")}>SecuredCrowed</span>
-      </div>
+      <HorizontalLogo imgCls="md:w-[75px] md:h-[75px] " />
       <div className="flex flex-1 items-center justify-end gap-6 h-full w-full divide-x">
         <ul className="h-full items-center hidden md:flex flex-1 gap-3 justify-around list-none">
           {data.map((e, i) => (
@@ -44,7 +35,7 @@ const Header: FC<HeaderProps> = () => {
               )}
               key={i}
             >
-              <Link href={"/"}>{e.ttl}</Link>
+              <Link href={e.link}>{e.ttl}</Link>
             </li>
           ))}
         </ul>

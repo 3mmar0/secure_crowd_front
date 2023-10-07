@@ -9,7 +9,7 @@ import Why from "@/components/home/Why";
 
 export default function Home() {
   return (
-    <main className="z-10 flex-1 flex gap-5 blur__effect flex-col h-full">
+    <main className="page">
       <Welcome />
       <Clients />
       <Testing />
